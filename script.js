@@ -22,7 +22,7 @@ form.addEventListener('submit', function(event){
     hours = hoursInput.value;
     form.reset();
 
-    const countryUrl =`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apikey}`;
+    const countryUrl =`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apikey}`;
     console.log(countryUrl);
 
    
@@ -86,7 +86,7 @@ form.addEventListener('submit', function(event){
             var formattedTime = forecastHours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
             forecastElement.innerHTML = `
             <div class="casting">
-                <img src="http://openweathermap.org/img/w/${forecast.weather[0].icon}.png" class="forcastImg">
+                <img src="https://openweathermap.org/img/w/${forecast.weather[0].icon}.png" class="forcastImg">
                 <div class="forcastTemp">${forecast.main.temp} °C</div>
                 <div class="forecastTime">${formattedTime}</div>
             </div>`;
@@ -160,7 +160,7 @@ function displayCityweather(value2){
             var minutes = date.getMinutes();
             var formattedTime = forecastHours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
             forecastElement.innerHTML = `
-                <img src="http://openweathermap.org/img/w/${forecast.weather[0].icon}.png">
+                <img src="https://openweathermap.org/img/w/${forecast.weather[0].icon}.png">
                 <div>${forecast.main.temp} °C</div>
                 <div class="forecastTime">${formattedTime}</div>`;
             forecastContainer.appendChild(forecastElement);
