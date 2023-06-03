@@ -6,7 +6,6 @@ const img = document.querySelector('.weather-icon');
 let info ;
 var hours ;
 
-
 //....
 
 // to listen the interd CITY and Hours 
@@ -15,7 +14,6 @@ form.addEventListener('submit', function(event){
     
     errorH3.innerText = '';
     img.src = '' ;
-    
 
     var apikey = '5662a8d3a597efd166ca0ed5853477fb';
     const input = document.querySelector('.inputCity');
@@ -76,7 +74,7 @@ form.addEventListener('submit', function(event){
         }else {throw new Error('Hours tempritures are not found')}
     })
     
-    // Weather-prognosdata 
+    // -prognosdata 
     .then(data => {
         var forecastContainer = document.getElementById('forecastContainer'); 
         forecastContainer.innerHTML = '';
@@ -106,7 +104,7 @@ form.addEventListener('submit', function(event){
 
 
 function cityData(value) {      //value=  array , length 1 , (object) 
-                
+    // console.log(value);             
 
      //if response1.json() has information about the city then return an array [ lat,lon,name] otherwise is an error
     if (value.length === 1){        
@@ -181,7 +179,6 @@ function handleError(error){
     pIconDescription.innerText = '';
     pDiscription.innerText = '';
     img.src = '' ;
-    forecastElement.innerHTML = '';
     errorH3.innerText = error.message;
     console.log(error);
 
