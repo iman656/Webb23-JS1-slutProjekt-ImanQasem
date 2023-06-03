@@ -181,6 +181,7 @@ function handleError(error){
     pIconDescription.innerText = '';
     pDiscription.innerText = '';
     img.src = '' ;
+    forecastElement.innerHTML = '';
     errorH3.innerText = error.message;
     console.log(error);
 
