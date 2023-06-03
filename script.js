@@ -15,7 +15,7 @@ form.addEventListener('submit', function(event){
     
     errorH3.innerText = '';
     img.src = '' ;
-    forecastElement.innerHTML = '';
+    
 
     var apikey = '5662a8d3a597efd166ca0ed5853477fb';
     const input = document.querySelector('.inputCity');
